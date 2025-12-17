@@ -41,7 +41,7 @@ const Footer = () => {
                 className="h-10 w-auto object-contain"
               />
               <div>
-                <span className="text-xl font-bold text-foreground">iSOLUTIONS</span>
+                <span className="text-xl font-bold text-foreground">SOLUTIONSFIN</span>
               </div>
             </div>
             <p className="text-sm text-muted-foreground">

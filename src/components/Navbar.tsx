@@ -54,7 +54,7 @@ const Navbar = () => {
               />
               <div>
                 <span className="text-xl font-bold text-foreground">
-                  <span className="text-gradient-blue">i</span>SOLUTIONS
+                  SOLUTIONSFIN
                 </span>
                 <p className="text-[10px] text-muted-foreground tracking-wider">A COMPLETE FINANCIAL SOLUTION</p>
               </div>
