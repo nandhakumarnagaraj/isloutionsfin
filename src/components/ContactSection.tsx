@@ -111,7 +111,7 @@ const ContactSection = () => {
             <h3 className="text-xl font-semibold text-foreground mb-6">Send us a Message</h3>
 
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                   <label className="block text-sm text-muted-foreground mb-2">Full Name</label>
                   <input

@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { useIsMobile } from '@/hooks/use-mobile';
 import {
   Home,
   Car,
@@ -14,8 +15,11 @@ import { Button } from '@/components/ui/button';
 
 const ServicesSection = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const isMobile = useIsMobile();
 
   useEffect(() => {
+    if (isMobile) return;
+
     const scrollContainer = scrollRef.current;
     if (!scrollContainer) return;
 
@@ -50,7 +54,7 @@ const ServicesSection = () => {
       scrollContainer.removeEventListener('mouseenter', handleMouseEnter);
       scrollContainer.removeEventListener('mouseleave', handleMouseLeave);
     };
-  }, []);
+  }, [isMobile]);
   const services = [
     {
       icon: Home,

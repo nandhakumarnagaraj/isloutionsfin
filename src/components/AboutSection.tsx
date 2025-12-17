@@ -24,7 +24,7 @@ const AboutSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Image/Visual Side */}
-          <div className="relative">
+          <div className="relative max-w-xs sm:max-w-md mx-auto">
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-card border border-border">
               {/* Decorative Pattern */}
               <div className="absolute inset-0 opacity-10">
@@ -51,21 +51,21 @@ const AboutSection = () => {
             </div>
 
             {/* Stats Card */}
-            <div className="absolute -bottom-8 -right-8 bg-gradient-card p-6 rounded-xl border border-secondary/30 shadow-card shadow-glow-gold">
+            <div className="absolute bottom-4 right-4 sm:bottom-4 sm:right-4 bg-gradient-card p-6 rounded-xl border border-secondary/30 shadow-card shadow-glow-gold">
               <p className="text-4xl font-bold text-gradient-gold">14+</p>
               <p className="text-sm text-muted-foreground">Years of Trust</p>
             </div>
           </div>
 
           {/* Content Side */}
-          <div className="space-y-8">
+          <div className="space-y-8 text-center lg:text-left">
             <div>
               <p className="text-secondary font-semibold mb-2 tracking-wider text-sm">ABOUT US</p>
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                 Building Financial{' '}
                 <span className="text-gradient-blue">Futures</span> Since 2010
               </h2>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed max-w-xl mx-auto lg:mx-0">
                 iSolutions is a trusted financial services company based in Chennai, dedicated to providing 
                 comprehensive solutions for all your financial needs. Under the leadership of Managing Director 
                 D. Rajesh, we've helped thousands of families achieve their financial goals.
@@ -73,7 +73,7 @@ const AboutSection = () => {
             </div>
 
             {/* Highlights */}
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {highlights.map((item, index) => (
                 <div key={index} className="text-center p-4 rounded-xl bg-muted/50 border border-border">
                   <item.icon className="w-8 h-8 text-accent mx-auto mb-2" />
@@ -84,7 +84,7 @@ const AboutSection = () => {
             </div>
 
             {/* Features */}
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {features.map((feature, index) => (
                 <div key={index} className="flex items-center gap-2">
                   <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0" />

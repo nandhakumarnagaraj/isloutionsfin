@@ -1,7 +1,9 @@
 import { useEffect, useRef } from 'react';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const PhotoGallery = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const isMobile = useIsMobile();
 
   // Sample images - replace with your actual images
   const images = [
@@ -19,18 +21,20 @@ const PhotoGallery = () => {
   ];
 
   useEffect(() => {
+    if (isMobile) return;
+
     const scrollContainer = scrollRef.current;
     if (!scrollContainer) return;
 
-    let scrollPosition = 0;
+    let scrollPosition = scrollContainer.scrollWidth / 2;
     const scrollSpeed = 1; // Adjust speed (pixels per frame)
 
     const scroll = () => {
-      scrollPosition += scrollSpeed;
+      scrollPosition -= scrollSpeed;
 
       // Reset scroll when reaching halfway (seamless loop)
-      if (scrollPosition >= scrollContainer.scrollWidth / 2) {
-        scrollPosition = 0;
+      if (scrollPosition <= 0) {
+        scrollPosition = scrollContainer.scrollWidth / 2;
       }
 
       scrollContainer.scrollLeft = scrollPosition;
@@ -51,7 +55,7 @@ const PhotoGallery = () => {
       scrollContainer.removeEventListener('mouseenter', handleMouseEnter);
       scrollContainer.removeEventListener('mouseleave', handleMouseLeave);
     };
-  }, []);
+  }, [isMobile]);
 
   return (
     <div className="w-full py-8 overflow-hidden bg-gradient-to-r from-navy-deep via-background to-navy-deep">
