@@ -50,11 +50,7 @@ const AboutSection = () => {
               </div>
             </div>
 
-            {/* Stats Card */}
-            <div className="absolute bottom-4 right-4 sm:bottom-4 sm:right-4 bg-gradient-card p-6 rounded-xl border border-secondary/30 shadow-card shadow-glow-gold">
-              <p className="text-4xl font-bold text-gradient-gold">14+</p>
-              <p className="text-sm text-muted-foreground">Years of Trust</p>
-            </div>
+
           </div>
 
           {/* Content Side */}

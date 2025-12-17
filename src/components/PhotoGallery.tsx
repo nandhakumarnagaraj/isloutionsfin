@@ -27,7 +27,7 @@ const PhotoGallery = () => {
     if (!scrollContainer) return;
 
     let scrollPosition = scrollContainer.scrollWidth / 2;
-    const scrollSpeed = 1; // Adjust speed (pixels per frame)
+    const scrollSpeed = 2; // Adjust speed (pixels per frame)
 
     const scroll = () => {
       scrollPosition -= scrollSpeed;

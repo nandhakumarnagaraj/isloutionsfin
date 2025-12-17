@@ -23,14 +23,14 @@ const ServicesSection = () => {
     const scrollContainer = scrollRef.current;
     if (!scrollContainer) return;
 
-    let scrollPosition = 0;
-    const scrollSpeed = 0.5;
+    let scrollPosition = scrollContainer.scrollWidth / 2;
+    const scrollSpeed = 2;
     let animationId: number;
 
     const scroll = () => {
-      scrollPosition += scrollSpeed;
-      if (scrollPosition >= scrollContainer.scrollWidth / 2) {
-        scrollPosition = 0;
+      scrollPosition -= scrollSpeed;
+      if (scrollPosition <= 0) {
+        scrollPosition = scrollContainer.scrollWidth / 2;
       }
       scrollContainer.scrollLeft = scrollPosition;
       animationId = requestAnimationFrame(scroll);
@@ -195,24 +195,10 @@ const ServicesSection = () => {
             </div>
           </div>
 
-          {/* Scroll Hint */}
-          <div className="text-center mt-4 text-sm text-muted-foreground flex items-center justify-center gap-2">
-            <span>Auto-scrolling • Hover to pause</span>
-          </div>
+
         </div>
 
-        {/* CTA */}
-        <div className="text-center mt-12">
-          <p className="text-muted-foreground mb-4">
-            Can't find what you're looking for? We have more solutions!
-          </p>
-          <Button variant="gold" size="lg" asChild>
-            <a href="#contact">
-              View All Services
-              <ArrowRight className="w-5 h-5" />
-            </a>
-          </Button>
-        </div>
+
       </div>
     </section>
   );
