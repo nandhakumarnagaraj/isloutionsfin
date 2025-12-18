@@ -21,17 +21,17 @@ const ContactSection = () => {
     {
       icon: MapPin,
       title: 'Visit Us',
-      details: ['#3/17, Vaathiyar Thottam', '2nd Street, Kodambakkam', 'Chennai - 600024'],
+      details: ['B & B Spot, Ground Floor', 'New No. 653 / Old No. 370', 'Periyar E. V. R. Salai (P. H. Road)', 'Chennai – 600106'],
     },
     {
       icon: Phone,
       title: 'Call Us',
-      details: ['+91 9884823838', '044-48677215', '044-48677216'],
+      details: ['+91 9884823838', '', ''],
     },
     {
       icon: Mail,
       title: 'Email Us',
-      details: ['rajesh@isolutionsfin.com', 'info@isolutionsfin.com'],
+      details: ['info@isolutionsfin.com', 'rajesh@isolutionsfin.com'],
     },
     {
       icon: Clock,
@@ -41,10 +41,10 @@ const ContactSection = () => {
   ];
 
   const services = [
-    'Home Loan',
-    'Personal Loan',
-    'Vehicle Loan',
-    'Business Loan',
+    'Home Funding',
+    'Personal Funding',
+    'Vehicle Funding',
+    'Business Funding',
     'Insurance',
     'Investments',
     'Other',
@@ -94,7 +94,7 @@ const ContactSection = () => {
             {/* Map Placeholder */}
             <div className="aspect-video rounded-xl overflow-hidden bg-muted border border-border">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.7661!2d80.2233!3d13.0524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sKodambakkam%2C%20Chennai!5e0!3m2!1sen!2sin!4v1234567890"
+                src="https://maps.google.com/maps?q=B%20%26%20B%20Spot%2C%20Ground%20Floor%2C%20New%20No.%20653%20%2F%20Old%20No.%20370%2C%20Periyar%20E.%20V.%20R.%20Salai%20(P.%20H.%20Road)%2C%20Chennai%20%E2%80%93%20600106&t=&z=15&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

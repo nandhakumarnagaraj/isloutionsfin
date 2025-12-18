@@ -6,13 +6,16 @@ const HeroSection = () => {
     <section id="home" className="relative min-h-screen flex items-center bg-gradient-hero overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden -z-10">
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20 scale-105 animate-gentle-scale"
+          style={{ backgroundImage: 'url("/handshake_bg.png")' }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/80 to-background" />
+
         {/* Gradient Orbs */}
         <div className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse-glow" />
         <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-accent/15 rounded-full blur-3xl animate-pulse-glow animation-delay-400" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-secondary/5 rounded-full blur-3xl" />
-
-        {/* Grid Pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(hsl(220_25%_18%/0.3)_1px,transparent_1px),linear-gradient(90deg,hsl(220_25%_18%/0.3)_1px,transparent_1px)] bg-[size:60px_60px]" />
       </div>
 
       <div className="container mx-auto px-4 pt-24 md:pt-28 relative z-10">
@@ -27,11 +30,11 @@ const HeroSection = () => {
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight animate-slide-up">
               Your Complete{' '}
               <span className="text-gradient-gold">Financial</span>{' '}
-              <span className="text-gradient-blue">Solution</span>
+              <span className="text-gradient-blue">Solutions</span>
             </h1>
 
             <p className="text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 animate-slide-up animation-delay-200">
-              From personal loans to business investments, we provide comprehensive financial services
+              From personal funding to business investments, we provide comprehensive financial services
               tailored to your needs. Experience trusted expertise with iSolutions.
             </p>
 
@@ -52,62 +55,50 @@ const HeroSection = () => {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6 pt-8 border-t border-border animate-fade-in animation-delay-600">
               <div>
-                <p className="text-3xl font-bold text-gradient-gold">14+</p>
+                <p className="text-3xl font-bold text-gradient-gold">15+</p>
                 <p className="text-sm text-muted-foreground">Years Experience</p>
               </div>
               <div>
-                <p className="text-3xl font-bold text-gradient-blue">5000+</p>
+                <p className="text-3xl font-bold text-gradient-blue">1500+</p>
                 <p className="text-sm text-muted-foreground">Happy Clients</p>
               </div>
               <div>
-                <p className="text-3xl font-bold text-foreground">₹50Cr+</p>
-                <p className="text-sm text-muted-foreground">Loans Disbursed</p>
+                <p className="text-3xl font-bold text-foreground">₹700Cr+</p>
+                <p className="text-sm text-muted-foreground">Funding Disbursed</p>
               </div>
             </div>
           </div>
 
           {/* Visual Element */}
+          {/* Visual Element */}
           <div className="relative lg:block">
-            <div className="relative w-full aspect-square max-w-lg mx-auto scale-50 -mt-32 mb-12 lg:scale-100 lg:mt-0 lg:mb-0">
-              {/* Central Globe */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="relative w-72 h-72">
-                  {/* Outer Ring */}
-                  <div className="absolute inset-0 border-2 border-dashed border-primary/30 rounded-full animate-spin" style={{ animationDuration: '20s' }} />
-
-                  {/* Globe */}
-                  <div className="absolute inset-8 bg-gradient-to-br from-primary via-cyan to-primary rounded-full shadow-glow-cyan overflow-hidden">
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.2),transparent)]" />
-                    {/* Globe Lines */}
-                    <div className="absolute inset-0">
-                      <div className="absolute top-1/2 left-0 right-0 h-px bg-foreground/20" />
-                      <div className="absolute top-0 bottom-0 left-1/2 w-px bg-foreground/20" />
-                      <div className="absolute top-1/4 left-0 right-0 h-px bg-foreground/10" />
-                      <div className="absolute top-3/4 left-0 right-0 h-px bg-foreground/10" />
-                    </div>
-                  </div>
-
-                  {/* Red Dot */}
-                  <div className="absolute top-12 right-16 w-4 h-4 bg-destructive rounded-full shadow-lg shadow-destructive/50 animate-pulse" />
-                </div>
+            <div className="relative w-full aspect-square max-w-lg mx-auto mt-8 lg:mt-0">
+              {/* Main Visual Image */}
+              <div className="relative rounded-full overflow-hidden w-[350px] h-[350px] sm:w-[450px] sm:h-[450px] mx-auto border-4 border-white/10 shadow-2xl animate-float">
+                <img
+                  src="/mirror_building.png"
+                  alt="Corporate Building"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-tr from-primary/40 to-transparent" />
               </div>
 
               {/* Floating Cards */}
-              <div className="absolute top-0 left-0 bg-gradient-card p-4 rounded-xl border border-border shadow-card animate-float hidden lg:block">
+              <div className="absolute top-10 left-0 bg-gradient-card p-4 rounded-xl border border-border shadow-card animate-float hidden sm:block">
                 <TrendingUp className="w-8 h-8 text-accent mb-2" />
                 <p className="text-sm font-medium text-foreground">Investment Growth</p>
                 <p className="text-xs text-muted-foreground">+24% Returns</p>
               </div>
 
-              <div className="absolute bottom-0 right-0 bg-gradient-card p-4 rounded-xl border border-border shadow-card animate-float animation-delay-400 hidden lg:block">
+              <div className="absolute bottom-10 right-0 bg-gradient-card p-4 rounded-xl border border-border shadow-card animate-float animation-delay-400 hidden sm:block">
                 <Users className="w-8 h-8 text-secondary mb-2" />
                 <p className="text-sm font-medium text-foreground">Client Trust</p>
-                <p className="text-xs text-muted-foreground">5000+ Families</p>
+                <p className="text-xs text-muted-foreground">1500+ Families</p>
               </div>
 
-              <div className="absolute top-1/2 -right-4 bg-gradient-card p-4 rounded-xl border border-border shadow-card animate-float animation-delay-800 hidden lg:block">
+              <div className="absolute top-1/2 -right-8 bg-gradient-card p-4 rounded-xl border border-border shadow-card animate-float animation-delay-800 hidden sm:block">
                 <Shield className="w-8 h-8 text-primary mb-2" />
-                <p className="text-sm font-medium text-foreground">Secure Loans</p>
+                <p className="text-sm font-medium text-foreground">Secure Funding</p>
                 <p className="text-xs text-muted-foreground">100% Safe</p>
               </div>
             </div>

@@ -58,30 +58,30 @@ const ServicesSection = () => {
   const services = [
     {
       icon: Home,
-      title: 'Home Loans',
+      title: 'Home Funding',
       description: 'Make your dream home a reality with competitive rates and flexible EMI options.',
       features: ['Up to 90% financing', 'Tenure up to 30 years', 'Quick approval'],
       color: 'primary',
     },
     {
       icon: Car,
-      title: 'Vehicle Loans',
+      title: 'Vehicle Funding',
       description: 'Drive your dream vehicle with easy financing for cars, bikes, and commercial vehicles.',
       features: ['New & used vehicles', 'Low down payment', 'Fast disbursal'],
       color: 'accent',
     },
     {
       icon: Briefcase,
-      title: 'Personal Loans',
-      description: 'Meet your personal expenses with hassle-free loans and minimal documentation.',
+      title: 'Personal Funding',
+      description: 'Meet your personal expenses with hassle-free funding and minimal documentation.',
       features: ['No collateral needed', 'Instant approval', 'Flexible tenure'],
       color: 'secondary',
     },
     {
       icon: Building2,
-      title: 'Business Loans',
-      description: 'Fuel your business growth with working capital and expansion loans.',
-      features: ['MSME friendly', 'High loan amounts', 'Quick processing'],
+      title: 'Business Funding',
+      description: 'Fuel your business growth with working capital and expansion funding.',
+      features: ['MSME friendly', 'High funding amounts', 'Quick processing'],
       color: 'primary',
     },
     {
@@ -107,8 +107,8 @@ const ServicesSection = () => {
     },
     {
       icon: Landmark,
-      title: 'Loan Against Property',
-      description: 'Unlock the value of your property with attractive loan-to-value ratios.',
+      title: 'Funding Against Property',
+      description: 'Unlock the value of your property with attractive funding-to-value ratios.',
       features: ['High LTV ratio', 'Lower interest', 'Longer tenure'],
       color: 'accent',
     },
@@ -144,7 +144,7 @@ const ServicesSection = () => {
             <span className="text-gradient-gold">Solutions</span>
           </h2>
           <p className="text-muted-foreground">
-            From loans to investments, we offer a complete range of financial services
+            From funding to investments, we offer a complete range of financial services
             to help you achieve your goals at every stage of life.
           </p>
         </div>

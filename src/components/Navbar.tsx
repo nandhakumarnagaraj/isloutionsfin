@@ -38,25 +38,35 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled || isMobileMenuOpen
-          ? 'bg-background/95 backdrop-blur-md border-b border-border shadow-lg'
-          : 'bg-transparent'
-          }`}
+        className="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white shadow-lg border-b border-gray-100"
       >
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <a href="#home" className="flex items-center gap-3">
+            <a href="#home" className="flex items-center gap-0">
               <img
-                src="/logo.jpg"
+                src="/logo.png"
                 alt="iSolutions Logo"
-                className="h-12 w-auto object-contain"
+                className="h-16 w-auto object-contain animate-gentle-scale"
               />
               <div>
-                <span className="text-xl font-bold text-foreground">
-                  SOLUTIONSFIN
-                </span>
-                <p className="text-[10px] text-muted-foreground tracking-wider">A COMPLETE FINANCIAL SOLUTION</p>
+                <div className="flex flex-col gap-1">
+                  <div className="flex w-full justify-between text-2xl font-bold font-serif leading-none text-slate-900">
+                    <span>S</span>
+                    <span>O</span>
+                    <span>L</span>
+                    <span>U</span>
+                    <span>T</span>
+                    <span className="text-[#FF0000]">I</span>
+                    <span>O</span>
+                    <span>N</span>
+                    <span>S</span>
+                  </div>
+                  <div className="h-[2px] w-full bg-[#FF0000]" />
+                  <p className="text-[10px] font-bold tracking-widest leading-none text-center whitespace-nowrap text-slate-600">
+                    A COMPLETE FINANCIAL SOLUTION
+                  </p>
+                </div>
               </div>
             </a>
 
@@ -66,7 +76,7 @@ const Navbar = () => {
                 <a
                   key={link.href}
                   href={link.href}
-                  className="text-muted-foreground hover:text-foreground transition-colors duration-300 text-sm font-medium"
+                  className="transition-colors duration-300 text-sm font-medium text-slate-600 hover:text-slate-900"
                 >
                   {link.label}
                 </a>
@@ -88,7 +98,7 @@ const Navbar = () => {
 
             {/* Mobile Menu Button */}
             <button
-              className="md:hidden text-foreground p-2 z-50"
+              className="md:hidden p-2 z-50 text-slate-900"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             >
               {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -100,7 +110,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div
-          className="md:hidden fixed inset-0 z-40 bg-background/95 backdrop-blur-md animate-slide-down-and-fade"
+          className="md:hidden fixed inset-0 z-40 bg-white/95 backdrop-blur-md animate-slide-down-and-fade" // Changed to bg-white
           onClick={() => setIsMobileMenuOpen(false)}
         >
           <div className="container mx-auto px-4 h-full flex flex-col justify-center items-center gap-8">
@@ -108,7 +118,7 @@ const Navbar = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-2xl text-muted-foreground hover:text-foreground transition-colors animate-slide-up"
+                className="text-2xl text-slate-600 hover:text-slate-900 transition-colors animate-slide-up" // Dark text for mobile menu
                 style={{ animationDelay: `${i * 100 + 200}ms`, animationFillMode: 'both' }}
                 onClick={(e) => {
                   e.stopPropagation(); // Prevent closing the menu

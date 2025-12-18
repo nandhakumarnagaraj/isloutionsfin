@@ -9,10 +9,10 @@ const Footer = () => {
   ];
 
   const services = [
-    'Home Loans',
-    'Personal Loans',
-    'Vehicle Loans',
-    'Business Loans',
+    'Home Funding',
+    'Personal Funding',
+    'Vehicle Funding',
+    'Business Funding',
     'Insurance',
     'Investments',
   ];
@@ -34,14 +34,16 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="space-y-4">
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-0">
               <img
-                src="/logo.jpg"
+                src="/logo.png"
                 alt="iSolutions Logo"
-                className="h-10 w-auto object-contain"
+                className="h-14 w-auto object-contain animate-gentle-scale"
               />
               <div>
-                <span className="text-xl font-bold text-foreground">SOLUTIONSFIN</span>
+                <span className="text-2xl font-bold text-foreground font-serif tracking-wide">
+                  SOLUT<span className="text-[#FF0000]">I</span>ONS
+                </span>
               </div>
             </div>
             <p className="text-sm text-muted-foreground">
@@ -101,9 +103,10 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold text-foreground mb-4">Contact Info</h4>
             <div className="space-y-3 text-sm text-muted-foreground">
-              <p>#3/17, Vaathiyar Thottam</p>
-              <p>2nd Street, Kodambakkam</p>
-              <p>Chennai - 600024</p>
+              <p>B & B Spot, Ground Floor</p>
+              <p>New No. 653 / Old No. 370</p>
+              <p>Periyar E. V. R. Salai (P. H. Road)</p>
+              <p>Chennai – 600106</p>
               <p className="text-secondary">+91 9884823838</p>
               <p className="text-secondary">rajesh@isolutionsfin.com</p>
             </div>

@@ -10,7 +10,7 @@ const AboutSection = () => {
   const features = [
     'Personalized financial planning',
     'Competitive interest rates',
-    'Quick loan approvals',
+    'Quick funding approvals',
     'Transparent processes',
     'Dedicated relationship managers',
     'Flexible repayment options',
@@ -20,7 +20,7 @@ const AboutSection = () => {
     <section id="about" className="py-24 bg-background relative overflow-hidden">
       {/* Background */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/5 to-transparent" />
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Image/Visual Side */}
@@ -37,14 +37,16 @@ const AboutSection = () => {
                   <rect width="400" height="300" fill="url(#paisley)" />
                 </svg>
               </div>
-              
+
               {/* Content */}
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center space-y-4 p-8">
                   <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-gradient-to-br from-primary to-accent shadow-glow-cyan">
                     <span className="text-4xl font-bold text-primary-foreground">i</span>
                   </div>
-                  <h3 className="text-2xl font-bold text-foreground">iSOLUTIONS</h3>
+                  <h3 className="text-2xl font-bold text-foreground font-serif tracking-wide">
+                    SOLUT<span className="text-[#FF0000]">I</span>ONS
+                  </h3>
                   <p className="text-secondary font-medium">A Complete Financial Solution</p>
                 </div>
               </div>
@@ -62,8 +64,8 @@ const AboutSection = () => {
                 <span className="text-gradient-blue">Futures</span> Since 2010
               </h2>
               <p className="text-muted-foreground leading-relaxed max-w-xl mx-auto lg:mx-0">
-                iSolutions is a trusted financial services company based in Chennai, dedicated to providing 
-                comprehensive solutions for all your financial needs. Under the leadership of Managing Director 
+                iSolutions is a trusted financial services company based in Chennai, dedicated to providing
+                comprehensive solutions for all your financial needs. Under the leadership of Managing Director
                 D. Rajesh, we've helped thousands of families achieve their financial goals.
               </p>
             </div>
