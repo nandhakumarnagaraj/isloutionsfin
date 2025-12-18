@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { ArrowRight, TrendingUp, Factory, Building, ShieldCheck, Banknote } from 'lucide-react';
+import { ArrowRight, TrendingUp, Factory, Building2, ShieldCheck, Banknote, Globe, Wallet, FileCheck } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useInView } from 'framer-motion';
 
@@ -11,7 +11,8 @@ const BusinessGrowthSection = () => {
     {
       id: 'msme',
       title: 'MSME Support',
-      subtitle: 'Micro, Small and Medium Enterprises',
+      definition: 'Micro, Small and Medium Enterprises',
+      subtitle: 'Manufacturing & Production',
       description: 'Empowering the backbone of the economy. Our specialized funding for Micro, Small and Medium Enterprises in the manufacturing sector ensures your production never stops.',
       image: '/msme_manufacturing.png',
       icon: Factory,
@@ -21,13 +22,21 @@ const BusinessGrowthSection = () => {
     {
       id: 'sme',
       title: 'SME Solutions',
-      subtitle: 'Small and Medium Enterprises',
+      definition: 'Small and Medium Enterprises',
+      subtitle: 'Trading & Services',
       description: 'Accelerate your trading business with tailored financial solutions designed for Small and Medium Enterprises. From working capital to expansion funding, we provide the boost your business needs.',
       image: '/sme_trading.png',
       icon: TrendingUp,
       features: ['Working Capital', 'Trade Finance', 'Business Expansion'],
       color: 'blue'
     }
+  ];
+
+  const bankingSolutions = [
+    { name: 'Corporate Banking', icon: Building2 },
+    { name: 'Trade Finance', icon: Globe },
+    { name: 'O/D Facilities', icon: Wallet },
+    { name: 'Bank Guarantees', icon: FileCheck },
   ];
 
   return (
@@ -63,17 +72,18 @@ const BusinessGrowthSection = () => {
               {/* Image Side */}
               <div className={`flex-1 w-full relative group perspective-1000 ${isInView ? 'animate-slide-up' : 'opacity-0'}`} style={{ animationDelay: `${index * 200}ms` }}>
                 <div className="relative rounded-2xl overflow-hidden border border-border shadow-2xl transform transition-transform duration-700 group-hover:rotate-y-2">
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10" />
                   <img
                     src={item.image}
                     alt={item.title}
                     className="w-full h-[400px] object-cover transform transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute bottom-6 left-6 z-20">
-                    <div className={`p-3 rounded-xl inline-flex mb-3 ${item.color === 'gold' ? 'bg-secondary/20 text-secondary' : 'bg-primary/20 text-primary'}`}>
+                    <div className={`p-3 rounded-xl inline-flex mb-3 ${item.color === 'gold' ? 'bg-secondary/20 text-secondary' : 'bg-primary/20 text-primary'} backdrop-blur-sm`}>
                       <item.icon className="w-8 h-8" />
                     </div>
-                    <h3 className="text-2xl font-bold text-white">{item.subtitle}</h3>
+                    <h3 className="text-2xl font-bold text-white tracking-wide">{item.subtitle}</h3>
+                    <div className="h-1 w-12 bg-white/30 mt-3 rounded-full" />
                   </div>
                 </div>
                 {/* Decorative Elements */}
@@ -82,23 +92,29 @@ const BusinessGrowthSection = () => {
 
               {/* Content Side */}
               <div className={`flex-1 space-y-6 ${isInView ? 'animate-slide-up' : 'opacity-0'}`} style={{ animationDelay: `${index * 200 + 200}ms` }}>
-                <h3 className={`text-4xl font-bold ${item.color === 'gold' ? 'text-gradient-gold' : 'text-gradient-blue'}`}>
-                  {item.title}
-                </h3>
+                <div>
+                  <h3 className={`text-4xl font-bold mb-2 ${item.color === 'gold' ? 'text-gradient-gold' : 'text-gradient-blue'}`}>
+                    {item.title}
+                  </h3>
+                  <p className={`text-xl font-medium ${item.color === 'gold' ? 'text-secondary' : 'text-primary'}`}>
+                    {item.definition}
+                  </p>
+                </div>
+
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   {item.description}
                 </p>
 
                 <ul className="space-y-4">
                   {item.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center gap-3">
+                    <li key={idx} className="flex items-center gap-3 p-2 rounded-lg hover:bg-muted/50 transition-colors">
                       <div className={`w-2 h-2 rounded-full ${item.color === 'gold' ? 'bg-secondary' : 'bg-primary'}`} />
                       <span className="text-foreground font-medium">{feature}</span>
                     </li>
                   ))}
                 </ul>
 
-                <Button variant={item.color === 'gold' ? 'gold' : 'default'} className="mt-4" asChild>
+                <Button variant={item.color === 'gold' ? 'gold' : 'default'} className="mt-4" size="lg" asChild>
                   <a href="#contact">
                     Get Funding
                     <ArrowRight className="w-4 h-4 ml-2" />
@@ -117,10 +133,13 @@ const BusinessGrowthSection = () => {
               Trusted Banking Solutions
             </h3>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 opacity-70">
-            {['Corporate Banking', 'Trade Finance', 'O/D Facilities', 'Bank Guarantees'].map((bank, i) => (
-              <div key={i} className="p-4 rounded-lg bg-muted/30 border border-border text-center text-sm font-medium text-muted-foreground hover:bg-muted transition-colors">
-                {bank}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 opacity-90">
+            {bankingSolutions.map((item, i) => (
+              <div key={i} className="flex flex-col items-center justify-center p-6 rounded-xl bg-card border border-border/50 text-center hover:bg-muted/50 hover:border-border transition-all duration-300 group cursor-default">
+                <div className="p-3 rounded-full bg-primary/5 text-primary mb-3 group-hover:scale-110 transition-transform">
+                  <item.icon className="w-6 h-6" />
+                </div>
+                <span className="text-sm font-semibold text-foreground">{item.name}</span>
               </div>
             ))}
           </div>
