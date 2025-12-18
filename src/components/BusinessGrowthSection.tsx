@@ -9,24 +9,24 @@ const BusinessGrowthSection = () => {
 
   const solutions = [
     {
-      id: 'sme',
-      title: 'SME Solutions',
-      subtitle: 'Trading & Services',
-      description: 'Accelerate your trading business with tailored financial solutions designed for Small and Medium Enterprises. From working capital to expansion funding, we provide the boost your business needs.',
-      image: '/sme_trading.png',
-      icon: TrendingUp,
-      features: ['Working Capital', 'Trade Finance', 'Business Expansion'],
-      color: 'blue'
-    },
-    {
       id: 'msme',
       title: 'MSME Support',
-      subtitle: 'Manufacturing & Production',
+      subtitle: 'Micro, Small and Medium Enterprises',
       description: 'Empowering the backbone of the economy. Our specialized funding for Micro, Small and Medium Enterprises in the manufacturing sector ensures your production never stops.',
       image: '/msme_manufacturing.png',
       icon: Factory,
       features: ['Machinery Loans', 'Infrastructure', 'Raw Material Funding'],
       color: 'gold'
+    },
+    {
+      id: 'sme',
+      title: 'SME Solutions',
+      subtitle: 'Small and Medium Enterprises',
+      description: 'Accelerate your trading business with tailored financial solutions designed for Small and Medium Enterprises. From working capital to expansion funding, we provide the boost your business needs.',
+      image: '/sme_trading.png',
+      icon: TrendingUp,
+      features: ['Working Capital', 'Trade Finance', 'Business Expansion'],
+      color: 'blue'
     }
   ];
 
@@ -46,8 +46,8 @@ const BusinessGrowthSection = () => {
           </div>
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-6">
             Fueling Growth for{' '}
-            <span className="text-gradient-gold">SME</span> &{' '}
-            <span className="text-gradient-blue">MSME</span>
+            <span className="text-gradient-gold">MSME</span> &{' '}
+            <span className="text-gradient-blue">SME</span>
           </h2>
           <p className="text-muted-foreground text-lg">
             Comprehensive financial strategies tailored for trading and manufacturing sectors.
