@@ -1,73 +1,84 @@
-# Welcome to your Lovable project
+# iSolutions - A Complete Financial Solution
 
-## Project info
+iSolutions is a premier financial services consultancy based in Chennai, dedicated to providing comprehensive and personalized financial solutions. Since 2010, we have empowered over 10,000+ families and businesses to achieve their financial aspirations through expert guidance and specialized funding solutions.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+Managed by **D. Rajesh (Managing Director)**, iSolutions operates as an RBI Registered NBFC partner, ensuring compliance, transparency, and the highest standards of financial integrity.
 
-## How can I edit this code?
+## 🚀 Key Services
 
-There are several ways of editing your application.
+We offer a diverse portfolio of financial products tailored to meet individual and corporate needs:
 
-**Use Lovable**
+- **Home Funding:** Competitive rates with up to 90% financing and 30-year tenures.
+- **Business Funding:** MSME-friendly working capital and expansion funding.
+- **Personal Funding:** Instant approvals with minimal documentation and no collateral.
+- **Vehicle Funding:** Easy financing for new and used cars, bikes, and commercial vehicles.
+- **Insurance:** Comprehensive life, health, vehicle, and property coverage.
+- **Investments:** Expert portfolio management, SIP planning, and mutual fund guidance.
+- **Credit Cards:** Access to premium cards with exclusive rewards.
+- **Property Funding:** Unlock property value with high LTV ratios and flexible tenures.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## 🛠️ Technology Stack
 
-Changes made via Lovable will be committed automatically to this repo.
+This modern web platform is built with a focus on performance, accessibility, and sleek design:
 
-**Use your preferred IDE**
+- **Frontend:** [React 18](https://reactjs.org/) with [TypeScript](https://www.typescriptlang.org/)
+- **Build Tool:** [Vite](https://vitejs.dev/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **UI Components:** [shadcn/ui](https://ui.shadcn.com/) (Radix UI)
+- **Animations:** [Framer Motion](https://www.framer.com/motion/) & [Lucide React](https://lucide.dev/) icons
+- **Form Handling:** [React Hook Form](https://react-hook-form.com/) & [Zod](https://zod.dev/)
+- **Routing:** [React Router DOM](https://reactrouter.com/)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 📦 Project Structure
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```text
+src/
+├── components/     # Reusable UI components (Hero, About, Services, etc.)
+├── hooks/          # Custom React hooks (mobile detection, etc.)
+├── lib/            # Utility functions (shadcn/ui helpers)
+├── pages/          # Page-level components
+├── App.tsx         # Main application routing and providers
+└── main.tsx        # Application entry point
 ```
 
-**Edit a file directly in GitHub**
+## 🏁 Getting Started
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Prerequisites
 
-**Use GitHub Codespaces**
+- [Node.js](https://nodejs.org/) (v18 or higher)
+- [npm](https://www.npmjs.com/) or [bun](https://bun.sh/)
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Installation
 
-## What technologies are used for this project?
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   ```
 
-This project is built with:
+2. Install dependencies:
+   ```bash
+   npm install
+   # OR
+   bun install
+   ```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+3. Start the development server:
+   ```bash
+   npm run dev
+   # OR
+   bun run dev
+   ```
 
-## How can I deploy this project?
+4. Build for production:
+   ```bash
+   npm run build
+   ```
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+## 📍 Contact Information
 
-## Can I connect a custom domain to my Lovable project?
+- **Office:** Chennai, India
+- **Website:** [www.isolutionsfin.com](https://www.isolutionsfin.com)
+- **Status:** RBI Registered NBFC Compliance
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+---
+© 2025 iSolutions. All rights reserved.
